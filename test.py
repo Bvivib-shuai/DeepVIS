@@ -64,26 +64,16 @@ def generate_responses(model, tokenizer, prompt):
 
 def main():
     # Load JSON data
-    json_data = load_json_data("check_cot_test_format_1.json")
+    json_data = load_json_data("CoT-nvBench/test.json")
 
     model_lora, tokenizer_lora = load_model(with_lora=True)
     results = []
     for item in tqdm(json_data, desc="Processing items"):
         content_1 = extract_content_1(item)
         prompt = generate_input(content_1)
-
-        # Load model with LoRA
-        response_lora = generate_responses(model_lora, tokenizer_lora, prompt)
-
-        # Load model without LoRA
-        #model_no_lora, tokenizer_no_lora = load_model(with_lora=False)
-        #response_no_lora = generate_responses(model_no_lora, tokenizer_no_lora, prompt)
-
-        # Create a result dictionary for each item
         result = {
             "prompt": prompt,
             "response_finetuned_model": response_lora,
-            #"response_non_finetuned_model": response_no_lora
         }
         results.append(result)
 
@@ -92,7 +82,7 @@ def main():
     with open(f"test_{now}.json", 'w') as json_file:
         json.dump(results, json_file, indent=4)
 
-    print(f"Results saved to all_test_{now}.json")
+    print(f"Results saved to test_{now}.json")
 
 if __name__ == "__main__":
     main()
