@@ -156,7 +156,7 @@ def evaluate_accuracy(response_vql, groundtruth_vql):
 
 
 try:
-    with open('test_result_xxxx.json', 'r') as f:
+    with open('test_result_{now}.json', 'r') as f:
         test_data = json.load(f)
 except FileNotFoundError:
     print("The result file was not found. Please check the file path.")
