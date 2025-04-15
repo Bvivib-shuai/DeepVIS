@@ -143,5 +143,5 @@ with ThreadPoolExecutor(max_workers=50) as executor:
     results = list(tqdm(executor.map(process_item, dataset), total=len(dataset), desc="Processing items", unit="item"))
     new_dataset.extend(results)
 
-with open('new_processed_dataset_with_reasoning.json', 'w', encoding='utf-8') as f:
+with open('processed_nvbench_with_reasoning.json', 'w', encoding='utf-8') as f:
     json.dump(new_dataset, f, ensure_ascii=False, indent=4)
