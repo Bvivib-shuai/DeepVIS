@@ -4,8 +4,8 @@ from transformers import TextStreamer
 from peft import PeftModel
 from tqdm import tqdm
 import pandas as pd
-#SAVED_MODEL_FOLDER ="your model path"
-#SAVED_ADAPTER_FOLDER="your checkpoint path"
+SAVED_MODEL_FOLDER ="your model path"
+SAVED_ADAPTER_FOLDER="your checkpoint path"
 def deep_dict_to_json(obj):
     if isinstance(obj, dict):
         return {key: deep_dict_to_json(value) for key, value in obj.items()}
