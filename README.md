@@ -80,6 +80,7 @@ Reasoning for LIMIT: [Explain why the LIMIT clause (if present) in the Pre-enter
 LIMIT: [Number of rows for the LIMIT clause from the Pre-entered Correct VQL]  
 Step 5:  
 Inspection: Check whether the reasoning results of the first four steps are reasonable.   
-Final VQL: Combine the above content with the VQL template to obtain the final VQL result.   
+Final VQL: Combine the above content with the VQL template to obtain the final VQL result.  
+
 
 
