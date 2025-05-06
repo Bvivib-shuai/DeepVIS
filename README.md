@@ -11,21 +11,18 @@ For a detailed demonstration of how DeepVIS system works, check out our [System 
 # Prompts for generating CoT steps
 Please simulate a complete reasoning process to explain the Pre-entered Correct VQL, based on the provided Question and Database Schema below. Pretend that you are analyzing the Pre-entered Correct VQL for the first time and detail why each part of it is structured as such.
 
-Question:  
+Question:   
 {question}  
 Database Schema:  
-{db_schema}
-Pre-entered Correct VQL:
-[VQL]
+{db_schema}  
+Pre-entered Correct VQL:  
+[VQL]  
+{additional_constraints}  
 
-{additional_constraints}
-
-Now, please reason according to the following strict format:
-
-Step 1: 
-Reasoning for Chart Type: [Explain why the chart type in the Pre-entered Correct VQL is chosen based on the question and the database schema]
-Chart Type: [Fill in the chart type from the Pre-entered Correct VQL here]
-
+Now, please reason according to the following strict format:  
+Step 1:  
+Reasoning for Chart Type: [Explain why the chart type in the Pre-entered Correct VQL is chosen based on the question and the database schema]  
+Chart Type: [Fill in the chart type from the Pre-entered Correct VQL here]  
 Step 2: 
 Reasoning for FROM: [Explain why the tables in the FROM clause of the Pre-entered Correct VQL are chosen based on the question and the database schema]
 FROM: [Table names for the FROM clause from the Pre-entered Correct VQL]
