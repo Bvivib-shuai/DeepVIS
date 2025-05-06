@@ -15,7 +15,7 @@ We display vqls and generated charts between our model(**NL2VIS-CoT**) and seven
 Draw a chart showing the ten majors with the highest numbers of students whose city of residence is known, with the counts tallied for each major.  
 
 **VQLs:**  
-NL2VIS-CoT:  
+**NL2VIS-CoT:**
 VISUALIZE BAR SELECT MAJOR, COUNT(STUID) FROM STUDENT WHERE CITY_CODE IS NOT NULL GROUP BY MAJOR ORDER BY COUNT(STUID) DESC LIMIT 10  
 **Seq2Vis:**
 VISUALIZE BAR SELECT MAJOR, COUNT(*) FROM STUDENT GROUP BY MAJOR  
