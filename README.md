@@ -9,7 +9,7 @@ To address this issue, first, we propose a Chain-of-Thought (COT) data construct
 For a detailed demonstration of how DeepVIS system works, check out our [System Demo Video](https://anonymous.4open.science/r/DeepVIS-9C33/Demo%20Video.mp4).
 
 # Prompts for generating CoT steps
-Please simulate a complete reasoning process to explain the Pre-entered Correct VQL, based on the provided Question and Database Schema below. Pretend that you are analyzing the Pre-entered Correct VQL for the first time and detail why each part of it is structured as such.
+Please simulate a complete reasoning process to explain the Pre-entered Correct VQL, based on the provided Question, Database Schema and Constraints below. Pretend that you are analyzing the Pre-entered Correct VQL for the first time and detail why each part of it is structured as such.
 
 Question:   
 {question}  
@@ -17,7 +17,18 @@ Database Schema:
 {db_schema}  
 Pre-entered Correct VQL:  
 [VQL]  
-{additional_constraints}  
+Constraints:  
+The VQL template is as follows:  
+Visualize [TYPE] SELECT [COLUMNS] FROM [TABLES] [WHERE] [GROUP BY] [ORDER BY] [SORT DIRECTION] [LIMIT] BIN [BIN_COLUMN] BY [BIN_TIME_UNIT]  
+The constraints for each part are as follows:  
+1. VISUALIZE field: Only BAR, PIE, LINE, and SCATTER are allowed as values. It is used to specify the data visualization chart type of the query results. Analyze the nature of the question and the database schema to explain why the [TYPE] in the Pre-entered Correct VQL is chosen.  
+2. SELECT field: There must be exactly two columns from the database in the SELECT clause. These columns must be either directly from the columns listed in the Database Schema or valid derivations based on those columns (COUNT, AVG, MAX and MIN). Explain why the [COLUMNS] in the Pre-entered Correct VQL are selected considering the question and the database schema.  
+3. FROM field: Only add the table names that must be used to complete the natural-language query. Evaluate the question and the database schema to explain why the [TABLES] in the Pre-entered Correct VQL are necessary to answer the question. Describe the connection between these tables and the data required by the question.  
+4. WHERE field: Analyze the natural-language query and the database schema to determine whether there is a filtering requirement. When there are clear limiting conditions, accurately explain why the WHERE clause logic expressions in the Pre-entered Correct VQL are formed this way, considering the conditional logical relationships to match the query intent. The columns used in the conditions must be from the Database Schema or valid derivations.  
+5. Grouping:   
+If you need to group or aggregate the time column in the SELECT clause by a time unit (day, weekday, month, or year) and the current table does not have a column that meets this time - unit requirement, then use the BIN [BIN_COLUMN] BY [BIN_TIME_UNIT] part. [BIN_COLUMN] should be a time column from the Database Schema, and [BIN_TIME_UNIT] should be the appropriate time unit (day, weekday, month, or year).  
+When the dataset needs to be grouped and it is not related to time, add other columns in the GROUP BY clause as grouping bases in sequence, with earlier - used grouping bases placed more forward. The columns in the GROUP BY clause must be from the Database Schema or valid derivations. Explain why the GROUP BY and BIN (if applicable) parts in the Pre-entered Correct VQL are set up based on the question and the database schema.  
+6. LIMIT field: Add a LIMIT clause at the end of the VQL to specify the maximum number of rows to return. If there is no limit requirement, leave it empty. Explain why the LIMIT clause (if present) in the Pre-entered Correct VQL is included or not, considering factors such as the amount of data needed to answer the question and performance implications.  
 
 Now, please reason according to the following strict format:  
 Step 1:  
