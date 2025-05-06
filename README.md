@@ -12,8 +12,7 @@ For a detailed demonstration of how DeepVIS system works, check out our [System 
 We display vqls and generated charts between our model(**NL2VIS-CoT**) and seven representative NL2VIS models with different architectures.
 
 **Question:** 
-Draw a bar chart of the top 10 majors, counting only students with a non‑null city\_code and ordering the groups by descending student count.
-
+Draw a chart showing the ten majors with the highest numbers of students whose city of residence is known, with the counts tallied for each major.
 
 **NL2VIS-CoT:**
 VISUALIZE BAR SELECT MAJOR, COUNT(STUID) FROM STUDENT WHERE CITY_CODE IS NOT NULL GROUP BY MAJOR ORDER BY COUNT(STUID) DESC LIMIT 10
