@@ -9,7 +9,7 @@ To address this issue, first, we propose a Chain-of-Thought (COT) data construct
 For a detailed demonstration of how DeepVIS system works, check out our [System Demo Video](https://anonymous.4open.science/r/DeepVIS-9C33/Demo%20Video.mp4).
 
 # Comparative Analysis
-we display vqls and generated charts between our method(**NL2VIS-CoT**) and seven representative NL2VIS methods with different architectures.
+We display vqls and generated charts between our model(**NL2VIS-CoT**) and seven representative NL2VIS models with different architectures.
 
 **NL2VIS-CoT:**
 VISUALIZE BAR SELECT MAJOR, COUNT(STUID) FROM STUDENT WHERE CITY_CODE IS NOT NULL GROUP BY MAJOR ORDER BY COUNT(STUID) DESC LIMIT 10
