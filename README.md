@@ -48,7 +48,8 @@ Inspection: Check whether the reasoning results of the first four steps are reas
 Final VQL: Combine the above content with the VQL template to obtain the final VQL result.   
 
 # Comparative Analysis
-We display vqls and generated charts between our model(**NL2VIS-CoT**) and seven representative NL2VIS models with different architectures.  
+We display vqls and generated charts between our model(**NL2VIS-CoT**) and seven representative NL2VIS models with different architectures. 
+
 **Question:** 
 Draw a chart showing the ten majors with the highest numbers of students whose city of residence is known, with the counts tallied for each major.  
 **NL2VIS-CoT:**
