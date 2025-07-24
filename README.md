@@ -8,31 +8,6 @@ To address this issue, first, we propose a Chain-of-Thought (COT) data construct
 # Demo Video
 For a detailed demonstration of how DeepVIS system works, check out our [System Demo Video](https://anonymous.4open.science/r/DeepVIS-9C33/Demo%20Video.mp4).
 
-# Comparative Analysis
-We display vqls and generated charts between our model(**NL2VIS-CoT**) and seven representative NL2VIS models with different architectures. 
-![overview](https://anonymous.4open.science/r/DeepVIS-9C33/img/Comparative_analysis.png)
-**Question:** 
-Draw a chart showing the ten majors with the highest numbers of students whose city of residence is known, with the counts tallied for each major.  
-
-**VQLs:**  
-**NL2VIS-CoT:**
-VISUALIZE BAR SELECT MAJOR, COUNT(STUID) FROM STUDENT WHERE CITY_CODE IS NOT NULL GROUP BY MAJOR ORDER BY COUNT(STUID) DESC LIMIT 10  
-**Seq2Vis:**
-VISUALIZE BAR SELECT MAJOR, COUNT(\*) FROM STUDENT GROUP BY MAJOR  
-**Transformer:** 
-VISUALIZE BAR SELECT MAJOR, COUNT(STUID) FROM STUDENT WHERE CITY_CODE IS NOT NULL GROUP BY MAJOR ORDER BY COUNT(STUID) DESC  
-**ncNet:** 
-VISUALIZE BAR SELECT MAJOR, COUNT(\*) FROM STUDENT WHERE CITY_CODE IS NOT NULL GROUP BY MAJOR ORDER BY MAJOR DESC LIMIT 10  
-**RGVisNet:** 
-VISUALIZE BAR SELECT MAJOR, COUNT(STUID) FROM STUDENT WHERE CITY_CODE IS NOT NULL GROUP BY MAJOR ORDER BY COUNT(STUID) ASC LIMIT 10  
-**Llama3.1-8B-SFT:**
-VISUALIZE PIE SELECT MAJOR, COUNT(\*) FROM STUDENT WHERE CITY_CODE IS NOT NULL GROUP BY MAJOR ORDER BY COUNT(\*) DESC LIMIT 10  
-**ChartGPT:**
-VISUALIZE BAR SELECT MAJOR, COUNT(STUID) FROM STUDENT WHERE CITY_CODE IS NOT NULL GROUP BY MAJOR  
-**GPT-4o-mini:**
-VISUALIZE BAR SELECT MAJOR, COUNT(STUID) FROM STUDENT WHERE CITY_CODE IS NOT NULL GROUP BY MAJOR ORDER BY COUNT(STUID) ASC LIMIT 10  
-
-
 # Prompts for generating CoT steps
 Please simulate a complete reasoning process to explain the Pre-entered Correct VQL, based on the provided Question, Database Schema and Constraints below. Pretend that you are analyzing the Pre-entered Correct VQL for the first time and detail why each part of it is structured as such.
 
