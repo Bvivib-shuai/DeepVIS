@@ -1,3 +1,6 @@
+# One-click execution script
+After run.py finishes execution, our proposed model will complete training and testing, and save the test results across five metrics.
+
 # DeepVIS
 Despite data visualization's power in uncovering patterns and sharing insights, crafting effective visuals demands knowledge of authoring tools and can disrupt the analysis process. Although large language models hold potential for auto-converting analysis intent into visualizations, current methods operate as black boxes lacking transparent reasoning, hindering users from grasping design rationales and improving subpar outputs.
 ![teaser](https://github.com/Bvivib-shuai/DeepVIS/blob/main/img/teaser.png)
@@ -7,6 +10,3 @@ To address this issue, first, we propose a Chain-of-Thought (COT) data construct
 
 # Database
 The database files used when running evaluation.py can be downloaded from [database](https://github.com/TsinghuaDatabaseGroup/nvBench/blob/main/databases.zip).
-
-# One-click execution script
-After run.py finishes execution, our proposed model will complete training and testing, and save the test results across five metrics.
