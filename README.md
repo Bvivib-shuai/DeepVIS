@@ -10,5 +10,3 @@ The database files used when running evaluation.py can be downloaded from [datab
 
 # One-click execution script
 After run.py finishes execution, our proposed model will complete training and testing, and save the test results across five metrics.
-Test results can be referenced at ![performance comparison](https://github.com/Bvivib-shuai/DeepVIS/blob/main/img/performan%20comparison.png)
-
