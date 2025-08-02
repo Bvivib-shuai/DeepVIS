@@ -5,5 +5,9 @@ Despite data visualization's power in uncovering patterns and sharing insights, 
 To address this issue, first, we propose a Chain-of-Thought (COT) data construction process. We design a comprehensive CoT reasoning process for Natural-Language-to-Visualization (NL2VIS) and develop an automated pipeline to endow existing datasets with structured reasoning steps. Second, we introduce **nvBench-CoT**, a specialized dataset that records detailed step-by-step reasoning from ambiguous natural language descriptions to final visualizations. Finally, we propose **DeepVIS**, an interactive visual interface that is deeply integrated with the CoT reasoning process. It enables users to inspect reasoning steps, correct errors, and optimize visualization results.
 ![overview](https://github.com/Bvivib-shuai/DeepVIS/blob/main/img/overview.png)
 
+# Database
 The database files used when running evaluation.py can be downloaded from [database](https://github.com/TsinghuaDatabaseGroup/nvBench/blob/main/databases.zip).
+
+# One-click execution script
+After run.py finishes execution, our proposed model will complete training and testing, and save the test results across five metrics.
 
