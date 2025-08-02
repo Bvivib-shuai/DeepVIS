@@ -1,4 +1,5 @@
 # One-click execution script
+See requirements.txt for dependency information.
 After run.py finishes execution, our proposed model will complete training and testing, and save the test results across five metrics.
 
 # DeepVIS
