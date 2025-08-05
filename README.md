@@ -11,15 +11,15 @@ python run.py.
 
 The run.py script will:  
 
-(1)Download the nvBench-CoT dataset and Llama-3.1-8B-Instruct model.  
+(1) Download the nvBench-CoT dataset and Llama-3.1-8B-Instruct model.  
 
-(2)Train the NL2VIS-CoT model on the training dataset.  
+(2) Train the NL2VIS-CoT model on the training dataset.  
 
-(3)Test the trained model on the test dataset.  
+(3) Test the trained model on the test dataset.  
 
-(4)Evaluate performance across five metrics.  
+(4) Evaluate performance across five metrics.  
 
-(5)Save the test results to output files.  
+(5) Save the test results to output files.  
 
 The test results will align with the **Chart Acc**, **Axis Acc**, **SQL Acc**, **Aata Acc**, and **All Acc** of **NL2VIS-CoT** in **Table 1: Performance Comparison** of the paper, demonstrating the reproducibility of our work.
 
