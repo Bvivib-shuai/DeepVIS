@@ -9,7 +9,8 @@ To train and test the NL2VIS-CoT model, simply run:
 python run.py.  
 ```
 
-The run.py script will:
+The run.py script will:  
+
 1.Download the nvBench-CoT dataset and Llama-3.1-8B-Instruct model.  
 
 2.Train the NL2VIS-CoT model on the training dataset.  
