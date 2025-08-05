@@ -4,8 +4,10 @@ Install the required dependencies:
 pip install -r requirements.txt
 ```
 
-
-To train and test the NL2VIS-CoT model, simply run: python run.py.  
+To train and test the NL2VIS-CoT model, simply run: 
+```bash
+python run.py.  
+```
 
 The run.py script will:
 1.Download the nvBench-CoT dataset and Llama-3.1-8B-Instruct model.  
