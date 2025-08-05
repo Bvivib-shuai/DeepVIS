@@ -1,5 +1,7 @@
 # One-click execution script
-Install the required dependencies: pip install -r requirements.txt.  
+Install the required dependencies: 
+```bash
+pip install -r requirements.txt
 
 To train and test the NL2VIS-CoT model, simply run: python run.py.  
 
