@@ -1,13 +1,20 @@
 # One-click execution script
-Install the required dependencies: pip install -r requirements.txt.
-To train and test the NL2VIS-CoT model, simply run: python run.py.
+Install the required dependencies: pip install -r requirements.txt.  
+
+To train and test the NL2VIS-CoT model, simply run: python run.py.  
+
 The run.py script will:
-1.Download the nvBench-CoT dataset and Llama-3.1-8B-Instruct model.
-2.Train the NL2VIS-CoT model on the training dataset.
-3.Test the trained model on the test dataset.
-4.Evaluate performance across five metrics.
-5.Save the test results to output files.
-The test results will align with the **chart Acc**, **axis Acc**, **SQL Acc**, **data Acc**, and **all Acc** of **NL2VIS-CoT** in **Table 1: Performance Comparison** of the paper, demonstrating the reproducibility of our work.
+1.Download the nvBench-CoT dataset and Llama-3.1-8B-Instruct model.  
+
+2.Train the NL2VIS-CoT model on the training dataset.  
+
+3.Test the trained model on the test dataset.  
+
+4.Evaluate performance across five metrics.  
+
+5.Save the test results to output files.  
+
+The test results will align with the **Chart Acc**, **Axis Acc**, **SQL Acc**, **Aata Acc**, and **All Acc** of **NL2VIS-CoT** in **Table 1: Performance Comparison** of the paper, demonstrating the reproducibility of our work.
 
 # DeepVIS
 Despite data visualization's power in uncovering patterns and sharing insights, crafting effective visuals demands knowledge of authoring tools and can disrupt the analysis process. Although large language models hold potential for auto-converting analysis intent into visualizations, current methods operate as black boxes lacking transparent reasoning, hindering users from grasping design rationales and improving subpar outputs.
