@@ -1,5 +1,6 @@
 ## 🎉 Paper Accepted at IEEE VIS 2025
 We are delighted to announce that our manuscript has been accepted for IEEE VIS 2025. The accepted work will appear in a special issue of IEEE Transactions on Visualization and Computer Graphics (TVCG).
+
 You can view our preprint on [arXiv](https://arxiv.org/abs/2508.01700).
 
 # DeepVIS
