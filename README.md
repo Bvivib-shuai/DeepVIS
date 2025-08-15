@@ -1,3 +1,5 @@
+We are delighted to announce that our manuscript has been accepted for IEEE VIS 2025. The accepted work will appear in a special issue of IEEE Transactions on Visualization and Computer Graphics (TVCG).
+
 # One-click execution script
 Install the required dependencies: 
 ```bash
