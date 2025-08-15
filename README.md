@@ -1,7 +1,7 @@
 ## 🎉 Paper Accepted at IEEE VIS 2025
 We are delighted to announce that our manuscript has been accepted for IEEE VIS 2025. The accepted work will appear in a special issue of IEEE Transactions on Visualization and Computer Graphics (TVCG).
 
-You can view our preprint on [DeepVIS](https://arxiv.org/abs/2508.01700).
+You can view our preprint on [DeepVIS: Bridging Natural Language and Data Visualization Through Step-wise Reasoning](https://arxiv.org/abs/2508.01700).
 
 # DeepVIS
 Despite data visualization's power in uncovering patterns and sharing insights, crafting effective visuals demands knowledge of authoring tools and can disrupt the analysis process. Although large language models hold potential for auto-converting analysis intent into visualizations, current methods operate as black boxes lacking transparent reasoning, hindering users from grasping design rationales and improving subpar outputs.
