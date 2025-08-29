@@ -1,3 +1,0 @@
-Title: DeepVIS: Bridging Natural Language and Data Visualization Through Step-wise Reasoning
-Authors: Zhihao Shuai, Boyan Li, Siyu Yan, Yuyu Luo, Weikai Yang
-Operating System: Ubuntu 20.04.6 LTS (Focal Fossa)
