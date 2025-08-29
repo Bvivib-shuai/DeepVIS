@@ -12,28 +12,3 @@ To address this issue, first, we propose a Chain-of-Thought (COT) data construct
 
 # Database
 The database files used when running evaluation.py can be downloaded from [database](https://github.com/TsinghuaDatabaseGroup/nvBench/blob/main/databases.zip).
-
-# One-click execution script
-Install the required dependencies: 
-```bash
-pip install -r requirements.txt
-```
-
-To train and test the NL2VIS-CoT model, simply run: 
-```bash
-python run.py.  
-```
-
-The run.py script will:  
-
-(1) Download the nvBench-CoT dataset and Llama-3.1-8B-Instruct model.  
-
-(2) Train the NL2VIS-CoT model on the training dataset.  
-
-(3) Test the trained model on the test dataset.  
-
-(4) Evaluate performance across five metrics.  
-
-(5) Save the test results to output files.  
-
-The test results will align with the **Chart Acc**, **Axis Acc**, **SQL Acc**, **Aata Acc**, and **All Acc** of **NL2VIS-CoT** in **Table 1: Performance Comparison** of the paper, demonstrating the reproducibility of our work.
